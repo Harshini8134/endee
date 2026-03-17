@@ -50,3 +50,8 @@ The app successfully answers questions by searching the Endee vector database:
 4. User query is converted to a vector
 5. Endee performs cosine similarity search and returns top-K matching chunks
 6. Results are displayed as the answer
+
+
+
+## Screenshot
+![App Working](screenshot.png)
