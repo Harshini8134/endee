@@ -33,3 +33,20 @@ User Question → Sentence Transformer (MiniLM) → Embed Query → Search Endee
 - `query.py` — Searches Endee and returns relevant chunks
 - `app.py` — Streamlit web interface
 - `sample_docs/` — Folder for input documents
+
+## Demo Screenshot
+
+The app successfully answers questions by searching the Endee vector database:
+
+- Question: "What is machine learning?"
+- Answer: Retrieved relevant chunks from documents using cosine similarity search in Endee
+- Source: ai_basics.txt
+
+## How Endee Vector Database is Used
+
+1. Documents are split into chunks
+2. Each chunk is converted to a 384-dimensional vector using Sentence Transformers
+3. Vectors are stored in Endee using upsert operation
+4. User query is converted to a vector
+5. Endee performs cosine similarity search and returns top-K matching chunks
+6. Results are displayed as the answer
